@@ -1,9 +1,11 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,13 +35,19 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="flex min-h-screen flex-col antialiased">
+        {/* Barra de navegación */}
         <Navbar />
 
+        {/* Contenido de cada página */}
         <main className="flex-1">
           {children}
         </main>
 
+        {/* Pie de página */}
         <Footer />
+
+        {/* Botón flotante de WhatsApp */}
+        <WhatsAppButton />
       </body>
     </html>
   );
