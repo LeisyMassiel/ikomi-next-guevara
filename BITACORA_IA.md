@@ -32,6 +32,38 @@ La IA propuso una tabla comparativa de tecnologías y explicaciones sobre App Ro
 **Justificación:**
 Utilicé la propuesta como base y revisaré las explicaciones para relacionarlas con las necesidades específicas del proyecto IKOMI Perú.
 
+
+### Entrada 3: Corrección de un error en el Footer
+
+**Objetivo:** Corregir un problema de prerenderizado en Next.js.
+
+**Prompt utilizado:**
+"Estoy desarrollando IKOMI Perú y Next.js muestra
+dos problemas en Footer.tsx relacionados con new Date()."
+
+**Resumen de la respuesta:**
+La IA identificó que new Date() generaba un valor
+inestable durante el prerenderizado y propuso utilizar
+un año fijo para este proyecto académico.
+
+**Decisión tomada:** Modificado.
+
+**Código anterior:**
+`© {new Date().getFullYear()} IKOMI Perú.`
+
+**Código corregido:**
+`© 2026 IKOMI Perú.`
+
+**Justificación:**
+La propuesta inicial de IA no consideró que Next.js
+puede restringir el uso de valores dinámicos durante
+el prerenderizado. Elegí un año fijo porque el Footer
+no necesita actualizar la fecha en tiempo real.
+
+**Resultado:** Pendiente de verificar después de
+ejecutar npm run build.
+
+
 ---
 
 ## Próximas entradas
